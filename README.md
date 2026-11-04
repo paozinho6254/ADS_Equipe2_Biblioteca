@@ -1,5 +1,58 @@
 # Unibiblio - Sistema de Gestão de Biblioteca---
 
+## Como Executar o Projeto
+
+### Pré-requisitos
+
+- **Java JDK 17 ou 21** instalado e configurado no `PATH`
+- **Git**
+
+### Passo a passo
+
+1. **Clone o repositório:**
+   ```bash
+   git clone https://github.com/ADS-Equipe2/ADS_Equipe2_Biblioteca.git
+   cd ADS_Equipe2_Biblioteca
+   ```
+
+2. **Execute a aplicação com o Maven Wrapper:**
+   - **Linux / macOS:**
+     ```bash
+     ./mvnw spring-boot:run
+     ```
+   - **Windows:**
+     ```cmd
+     mvnw.cmd spring-boot:run
+     ```
+
+3. **Executar os testes unitários:**
+   ```bash
+   ./mvnw test
+   ```
+
+---
+
+## Como editar o projeto
+
+### Commit's devem ser feitos em branchs baseadas na Development
+
+## Evite Alterações na Main
+
+---
+
+## Acesso ao Banco de Dados (Ainda temporário)
+
+Com a aplicação em execução, o console do banco H2 pode ser acessado pelo navegador:
+
+- **URL:** [http://localhost:8080/h2-console](http://localhost:8080/h2-console)
+- **JDBC URL:** `jdbc:h2:mem:testdb`
+- **Driver Class:** `org.h2.Driver`
+- **Usuário:** `sa`
+- **Senha:** *(deixe em branco)*
+
+
+---
+
 ## Tecnologias Utilizadas
 
 - **Linguagem:** [Java 17](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html)
@@ -62,55 +115,5 @@ src/main/java/com/unibiblio/
   - Aplicação automática de multas por atraso na devolução.
   - Registro de pagamentos de multas em diferentes modalidades.
 - **Notificações:** Rotina assíncrona (`NotificacaoWorker`) para avisos de vencimento e disponibilidade de reservas.
-
----
-
-## Como Executar o Projeto
-
-### Pré-requisitos
-
-- **Java JDK 17 ou 21** instalado e configurado no `PATH`
-- **Git**
-
-### Passo a passo
-
-1. **Clone o repositório:**
-   ```bash
-   git clone https://github.com/ADS-Equipe2/ADS_Equipe2_Biblioteca.git
-   cd ADS_Equipe2_Biblioteca
-   ```
-
-2. **Execute a aplicação com o Maven Wrapper:**
-   - **Linux / macOS:**
-     ```bash
-     ./mvnw spring-boot:run
-     ```
-   - **Windows:**
-     ```cmd
-     mvnw.cmd spring-boot:run
-     ```
-
-3. **Executar os testes unitários:**
-   ```bash
-   ./mvnw test
-   ```
-
----
-
-## Como editar o projeto
-
-## NUNCA DE COMMIT'S NA MAIN
-
----
-
-## Acesso ao Banco de Dados (Ainda temporário)
-
-Com a aplicação em execução, o console do banco H2 pode ser acessado pelo navegador:
-
-- **URL:** [http://localhost:8080/h2-console](http://localhost:8080/h2-console)
-- **JDBC URL:** `jdbc:h2:mem:testdb`
-- **Driver Class:** `org.h2.Driver`
-- **Usuário:** `sa`
-- **Senha:** *(deixe em branco)*
 
 
