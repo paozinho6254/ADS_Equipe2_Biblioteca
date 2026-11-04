@@ -1,7 +1,5 @@
 # Unibiblio - Sistema de Gestão de Biblioteca---
 
-## se
-
 ## Tecnologias Utilizadas
 
 - **Linguagem:** [Java 17](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html)
@@ -96,6 +94,12 @@ src/main/java/com/unibiblio/
    ```bash
    ./mvnw test
    ```
+
+---
+
+## Como editar o projeto
+
+## NUNCA DE COMMIT'S NA MAIN
 
 ---
 
