@@ -71,29 +71,56 @@ src/main/java/com/unibiblio/
 
 - **Java JDK 17 ou 21** instalado e configurado no `PATH`
 - **Git**
+- *(Opcional)* **Maven**: **Não é necessário ter o Maven instalado na máquina.** O projeto já inclui o **Maven Wrapper**, que baixa e configura a versão necessária do Maven automaticamente.
 
 ### Passo a passo
 
-1. **Clone o repositório:**
+1. **Verificar se o Java está instalado:**
+   Abra o terminal (ou Prompt de Comando/PowerShell) e verifique se o Java está acessível:
+   ```bash
+   java -version
+   ```
+   > Deve exibir uma versão do Java 17 ou superior.
+
+2. **Clonar o repositório:**
+   Faça o clone do projeto para a sua máquina e entre na pasta:
    ```bash
    git clone https://github.com/ADS-Equipe2/ADS_Equipe2_Biblioteca.git
    cd ADS_Equipe2_Biblioteca
    ```
 
-2. **Execute a aplicação com o Maven Wrapper:**
+3. **Executar a aplicação com o Maven Wrapper (sem precisar instalar o Maven):**
+   Como o Maven Wrapper (`mvnw` / `mvnw.cmd`) já está incluso na raiz do projeto, você não precisa baixar ou configurar o Maven manualmente no sistema operacional. Na primeira vez que for executado, o script fará o download automático da versão correta do Maven e de todas as bibliotecas necessárias.
+
+   - **Linux / macOS:**
+     *(Se necessário, conceda permissão de execução ao script no primeiro uso)*
+     ```bash
+     chmod +x mvnw
+     ./mvnw spring-boot:run
+     ```
+
+   - **Windows:**
+     - No **Prompt de Comando (CMD)**:
+       ```cmd
+       mvnw.cmd spring-boot:run
+       ```
+     - No **PowerShell**:
+       ```powershell
+       .\mvnw.cmd spring-boot:run
+       ```
+
+   > **Dica na primeira inicialização:** O primeiro download das dependências e do Maven pode levar alguns minutos. Quando aparecer no terminal a mensagem indicando que a aplicação iniciou (ex.: `Started UnibiblioApplication`), o sistema estará ativo e ouvindo na porta `8080`.
+
+4. **Executar os testes da aplicação (opcional):**
+   Para rodar a bateria de testes unitários sem precisar do Maven instalado:
    - **Linux / macOS:**
      ```bash
-     ./mvnw spring-boot:run
+     ./mvnw test
      ```
    - **Windows:**
      ```cmd
-     mvnw.cmd spring-boot:run
+     mvnw.cmd test
      ```
-
-3. **Executar os testes unitários:**
-   ```bash
-   ./mvnw test
-   ```
 
 ---
 
